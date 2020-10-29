@@ -3,6 +3,7 @@ Supported printers:
 * FlashForge Dreamer
 * FlashForge Dreamer NX
 * FlashForge Finder
+* FlashForge Creator Max
 * FlashForge Guider ( not linux based firmware like in Guider II, II S )
 * FlashForge Inventor ( not linux based firmware like FlashForge Inventor II )
 ------------
