@@ -253,7 +253,7 @@ int main(int argc, char *argv[])
   uint8_t xor_key[16] = { 0 };
   int c, encode = 0;
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__APPLE__)
   while ((c = getopt(argc, argv, "ei:o:")) != -1)
 #else
   while ((c = _getopt(argc, argv, "ei:o:")) != -1)
