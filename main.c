@@ -251,12 +251,13 @@ int main(int argc, char *argv[])
   FILE *f = 0, *o = 0;
   uint8_t buffer[2048];
   uint8_t xor_key[16] = { 0 };
+  char sz_key[16+1] = "flashforge790315";
   int c, encode = 0;
 
 #if defined(__linux__) || defined(__APPLE__)
-  while ((c = getopt(argc, argv, "ei:o:")) != -1)
+  while ((c = getopt(argc, argv, "ei:o:k:")) != -1)
 #else
-  while ((c = _getopt(argc, argv, "ei:o:")) != -1)
+  while ((c = _getopt(argc, argv, "ei:o:k:")) != -1)
 #endif
   {
     switch (c)
@@ -272,6 +273,14 @@ int main(int argc, char *argv[])
         o = fopen(optarg, "wb");
         printf("output: %s\n", optarg);
         break;
+      case 'k':
+        if( strlen( optarg ) != 16 )
+        {
+          printf( "invalid key size\n" );
+          return -1;
+        }
+        strcpy( sz_key, optarg ); 
+        break;
     }
   }
 
@@ -283,7 +292,7 @@ int main(int argc, char *argv[])
 
   printf("%s firmware... ", encode ? "encode" : "decode");
 
-  generate_xor_table("flashforge790315");
+  generate_xor_table( sz_key );
 
   while (feof(f) == 0)
   {
