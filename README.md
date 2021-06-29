@@ -7,6 +7,7 @@ Supported printers:
 * FlashForge Guider ( not linux based firmware like in Guider II, II S )
 * FlashForge Inventor ( not linux based firmware like FlashForge Inventor II )
 * Dremel 3D20
+* PowerSpec Ultra 3D
 ------------
 ### Building
 **Linux:**
@@ -20,7 +21,7 @@ Pelles C project included
 **Firmware encryption keys:**
 | Key | Vendor |
 | ---------- | ---------- |
-| flashforge790315 | FlashForge |
+| flashforge790315 | FlashForge/PowerSpec |
 | flashforge123456 | Dremel |
 ### Usage
 **Decrypt firmware:**
