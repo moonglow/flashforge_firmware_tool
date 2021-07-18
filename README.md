@@ -26,8 +26,8 @@ Pelles C project included
 ### Usage
 **Decrypt firmware:**
 
-`ff_fw_tool [-k <key>] -i firmware.bin -o decrypted_firmware.bin`
+`ff_fw_tool -k key -i firmware.bin -o decrypted_firmware.bin`
 
 **Encrypt firmware:**
 
-`ff_fw_tool [-k <key>] -e -i firmware.bin -o encrypted_firmware.bin`
+`ff_fw_tool -k key -e -i firmware.bin -o encrypted_firmware.bin`
