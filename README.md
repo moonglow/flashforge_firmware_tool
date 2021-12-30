@@ -31,3 +31,8 @@ Pelles C project included
 **Encrypt firmware:**
 
 `ff_fw_tool -k key -e -i firmware.bin -o encrypted_firmware.bin`
+
+
+#### Support me
+- <a href="https://www.patreon.com/bePatron?u=58145249" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+- **Bitcoin (P2WPKH):** bc1qstnsjqu2kw9v2axens54ycegn3stwvluq7ze5j
